@@ -33,7 +33,7 @@ export default function EquipmentMapping() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {equipmentData.map((item, i) => (
             <ScrollReveal key={item.nameEN} delay={Math.min(i + 1, 5)}>
-              <div className="bg-surface rounded-2xl border-4 border-primary p-6 h-full shadow-md hover:shadow-lg transition-all group">
+              <div className="bg-white rounded-2xl border-4 border-primary p-6 h-full shadow-md hover:shadow-lg transition-all group">
                 <div className="flex items-start gap-4">
                   <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center shrink-0 group-hover:rotate-6 transition-transform">
                     <item.icon className="w-8 h-8 text-primary" />
@@ -48,16 +48,16 @@ export default function EquipmentMapping() {
                       </span>
                     </div>
                     <div className="flex gap-6 mb-5">
-                      <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-white/5">
+                      <div className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100">
                         <Gauge className="w-5 h-5 text-primary" />
                         <span className="text-base text-text-primary font-black">{item.qty}</span>
                       </div>
-                      <div className="flex items-center gap-2 p-2 rounded-lg bg-white/5 border border-white/5">
+                      <div className="flex items-center gap-2 p-2 rounded-lg bg-slate-50 border border-slate-100">
                         <Activity className="w-5 h-5 text-accent" />
                         <span className="text-base text-text-primary font-black">{item.capacity}</span>
                       </div>
                     </div>
-                    <div className="p-4 rounded-xl bg-white/5 border border-white/5">
+                    <div className="p-4 rounded-xl bg-slate-50 border border-slate-100">
                       <p className="text-base font-bold text-text-primary leading-relaxed">
                         {lang === 'th' ? item.functionTH : item.functionEN}
                       </p>

@@ -52,7 +52,7 @@ export default function ProcessFlow() {
         {/* Flow Steps */}
         <div className="relative">
           {/* Vertical Line */}
-          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-amber-300 via-blue-400 via-cyan-400 via-emerald-400 via-violet-400 to-gray-300 z-0" />
+          <div className="absolute left-6 md:left-8 top-0 bottom-0 w-1 bg-slate-100 z-0" />
 
           <div className="space-y-6">
             {flowSteps.map((step, i) => (
@@ -70,7 +70,7 @@ export default function ProcessFlow() {
 
                   {/* Step Card */}
                   <div
-                    className="flex-1 rounded-2xl bg-surface border-4 p-6 transition-all shadow-md hover:shadow-lg"
+                    className="flex-1 rounded-2xl bg-white border-4 p-6 transition-all shadow-md hover:shadow-lg"
                     style={{ borderColor: step.color }}
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -87,8 +87,8 @@ export default function ProcessFlow() {
 
                     <p className="text-lg font-bold text-text-primary leading-relaxed mb-4">{t(step.descKey)}</p>
 
-                    <div className="pt-4 border-t border-white/5">
-                      <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5">
+                    <div className="pt-4 border-t border-slate-100">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50">
                         <span className="text-[11px] font-black text-text-muted uppercase tracking-widest shrink-0 mt-1">
                           {t('process.specs')}
                         </span>

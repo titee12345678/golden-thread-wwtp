@@ -53,9 +53,6 @@ export default function ProjectOverview() {
                 <span className="text-2xl font-bold text-text-primary">
                   {card.value}
                 </span>
-                {card.sublabel && (
-                  <span className="text-xs text-text-muted mt-1">{card.sublabel}</span>
-                )}
               </div>
             </ScrollReveal>
           ))}

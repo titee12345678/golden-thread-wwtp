@@ -28,7 +28,7 @@ export default function ProcessFlow() {
   ];
 
   return (
-    <section id="process" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="process" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-5xl mx-auto">
         <SectionHeader
           icon={Workflow}
@@ -70,7 +70,7 @@ export default function ProcessFlow() {
 
                   {/* Step Card */}
                   <div
-                    className="flex-1 rounded-2xl bg-white border-4 p-6 transition-all shadow-md hover:shadow-lg"
+                    className="flex-1 rounded-2xl bg-surface border-4 p-6 transition-all shadow-md hover:shadow-lg"
                     style={{ borderColor: step.color }}
                   >
                     <div className="flex items-center justify-between mb-4">
@@ -87,8 +87,8 @@ export default function ProcessFlow() {
 
                     <p className="text-lg font-bold text-text-primary leading-relaxed mb-4">{t(step.descKey)}</p>
 
-                    <div className="pt-4 border-t border-slate-100">
-                      <div className="flex items-start gap-3 p-3 rounded-lg bg-slate-50">
+                    <div className="pt-4 border-t border-white/5">
+                      <div className="flex items-start gap-3 p-3 rounded-lg bg-white/5">
                         <span className="text-[11px] font-black text-text-muted uppercase tracking-widest shrink-0 mt-1">
                           {t('process.specs')}
                         </span>

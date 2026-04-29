@@ -56,7 +56,7 @@ export default function TechnicalDetails() {
   const { lang, t } = useLang();
 
   return (
-    <section id="details" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="details" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-5xl mx-auto">
         <SectionHeader icon={BookOpen} title={t('tech.title')} subtitle={t('tech.subtitle')} badge={t('tech.badge')} />
         <div className="space-y-12">

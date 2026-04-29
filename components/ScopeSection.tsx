@@ -30,15 +30,15 @@ export default function ScopeSection() {
   const newScope = lang === 'th' ? newScopeTH : newScopeEN;
 
   return (
-    <section id="scope" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-white to-slate-50">
+    <section id="scope" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-5xl mx-auto">
         <SectionHeader icon={Link2} title={t('scope.title')} subtitle={t('scope.subtitle')} badge={t('scope.badge')} />
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <ScrollReveal>
             <div className="glass-card p-6 md:p-8 h-full">
               <div className="flex items-center gap-4 mb-8">
-                <div className="w-12 h-12 rounded-xl bg-slate-200 flex items-center justify-center shadow-sm">
-                  <ArrowRightLeft className="w-6 h-6 text-slate-700" />
+                <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center shadow-sm">
+                  <ArrowRightLeft className="w-6 h-6 text-slate-300" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-text-primary uppercase tracking-tight">{t('scope.existingTitle')}</h3>
@@ -47,10 +47,10 @@ export default function ScopeSection() {
               </div>
               <div className="space-y-5">
                 {scopeItems.map((item) => (
-                  <div key={item.labelEN} className="p-5 rounded-xl bg-white border-2 border-slate-100 hover:border-slate-300 transition-all shadow-sm">
+                  <div key={item.labelEN} className="p-5 rounded-xl bg-surface border-2 border-white/5 hover:border-white/10 transition-all shadow-sm">
                     <div className="flex items-start justify-between gap-3 mb-3">
                       <h4 className="font-bold text-base text-text-primary">{lang === 'th' ? item.labelTH : item.labelEN}</h4>
-                      <span className="badge bg-slate-200 text-slate-800 text-[11px] font-extrabold shrink-0 px-3 py-1 uppercase tracking-wider">{lang === 'th' ? item.statusTH : item.statusEN}</span>
+                      <span className="badge bg-white/10 text-white/70 text-[11px] font-extrabold shrink-0 px-3 py-1 uppercase tracking-wider">{lang === 'th' ? item.statusTH : item.statusEN}</span>
                     </div>
                     <p className="text-sm font-medium text-text-primary leading-relaxed">{lang === 'th' ? item.descTH : item.descEN}</p>
                   </div>
@@ -59,7 +59,7 @@ export default function ScopeSection() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={2}>
-            <div className="glass-card p-6 md:p-10 h-full border-primary/30 bg-gradient-to-br from-blue-50 to-white">
+            <div className="glass-card p-6 md:p-10 h-full border-primary/30 bg-surface">
               <div className="flex items-center gap-4 mb-8">
                 <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center shadow-sm">
                   <CheckCircle2 className="w-6 h-6 text-primary" />
@@ -71,7 +71,7 @@ export default function ScopeSection() {
               </div>
               <div className="space-y-3">
                 {newScope.map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white/60 border border-primary/10 hover:bg-white transition-all shadow-sm">
+                  <div key={i} className="flex items-start gap-4 p-4 rounded-xl bg-white/5 border border-primary/10 hover:bg-white/10 transition-all shadow-sm">
                     <CheckCircle2 className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                     <span className="text-base font-bold text-text-primary leading-tight">{item}</span>
                   </div>

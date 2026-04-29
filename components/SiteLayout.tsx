@@ -8,7 +8,7 @@ export default function SiteLayout() {
   const { lang, t } = useLang();
 
   return (
-    <section id="layout" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-50 to-white">
+    <section id="layout" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-5xl mx-auto">
         <SectionHeader
           icon={MapPin}
@@ -31,36 +31,34 @@ export default function SiteLayout() {
                 <defs>
                   {/* Water pattern */}
                   <pattern id="waterPattern" patternUnits="userSpaceOnUse" width="8" height="8">
-                    <rect width="8" height="8" fill="#DBEAFE" />
-                    <circle cx="4" cy="4" r="1" fill="#93C5FD" opacity="0.5" />
+                    <rect width="8" height="8" fill="#1E40AF" opacity="0.3" />
+                    <circle cx="4" cy="4" r="1" fill="#3B82F6" opacity="0.5" />
                   </pattern>
                   {/* Hatch pattern for surrounding area */}
                   <pattern id="hatchPattern" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
-                    <rect width="6" height="6" fill="#F8FAFC" />
-                    <line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" strokeWidth="0.5" />
+                    <rect width="6" height="6" fill="#0F172A" />
+                    <line x1="0" y1="0" x2="0" y2="6" stroke="#334155" strokeWidth="0.5" />
                   </pattern>
                   {/* Flow arrow marker */}
                   <marker id="flowArrowBlue" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto-start-auto">
-                    <path d="M 0 0 L 10 4 L 0 8 z" fill="#2563EB" opacity="0.7" />
+                    <path d="M 0 0 L 10 4 L 0 8 z" fill="#3B82F6" opacity="0.7" />
                   </marker>
                   <marker id="flowArrowGreen" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto-start-auto">
-                    <path d="M 0 0 L 10 4 L 0 8 z" fill="#059669" opacity="0.7" />
+                    <path d="M 0 0 L 10 4 L 0 8 z" fill="#10B981" opacity="0.7" />
                   </marker>
                   <marker id="flowArrowAmber" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto-start-auto">
-                    <path d="M 0 0 L 10 4 L 0 8 z" fill="#D97706" opacity="0.7" />
+                    <path d="M 0 0 L 10 4 L 0 8 z" fill="#F59E0B" opacity="0.7" />
                   </marker>
                 </defs>
 
                 {/* Background */}
-                <rect x="0" y="0" width="600" height="340" fill="#F8FAFC" rx="8" />
+                <rect x="0" y="0" width="600" height="340" fill="#0F172A" rx="8" />
 
                 {/* ===== POND 5 BOUNDARY ===== */}
-                {/* Pond 5 outer boundary (26.90 x 13.00 m) - represented proportionally */}
-                {/* Using scale: ~18px per meter, offset from (50, 60) */}
-                <rect x="50" y="60" width="484" height="234" fill="url(#hatchPattern)" stroke="#94A3B8" strokeWidth="1.5" strokeDasharray="6,3" rx="4" />
+                <rect x="50" y="60" width="484" height="234" fill="url(#hatchPattern)" stroke="#334155" strokeWidth="1.5" strokeDasharray="6,3" rx="4" />
 
                 {/* Pond 5 inner working area */}
-                <rect x="65" y="75" width="454" height="204" fill="#F0F9FF" stroke="#CBD5E1" strokeWidth="1" rx="3" />
+                <rect x="65" y="75" width="454" height="204" fill="#1E293B" stroke="#334155" strokeWidth="1" rx="3" />
 
                 {/* ===== TANKS (Based on Plan Layout Page 2) ===== */}
 
@@ -74,53 +72,53 @@ export default function SiteLayout() {
                     </circle>
                   ))
                 )}
-                <text x="174" y="205" textAnchor="middle" className="text-[13px] font-bold" fill="#1E40AF">{t('layout.eqTank')}</text>
-                <text x="174" y="220" textAnchor="middle" className="text-[9px]" fill="#3B82F6">13.0 × 11.0 × 4.0 m</text>
+                <text x="174" y="205" textAnchor="middle" className="text-[13px] font-bold" fill="#DBEAFE">{t('layout.eqTank')}</text>
+                <text x="174" y="220" textAnchor="middle" className="text-[9px]" fill="#93C5FD">13.0 × 11.0 × 4.0 m</text>
 
                 {/* AERATION TANK - Center-top (6.0 × 5.5m) */}
-                <rect x="283" y="82" width="108" height="99" rx="4" fill="#ECFEFF" stroke="#0891B2" strokeWidth="2" />
+                <rect x="283" y="82" width="108" height="99" rx="4" fill="#083344" stroke="#06B6D4" strokeWidth="2" />
                 {/* Aeration diffuser dots */}
                 {Array.from({ length: 3 }).map((_, row) =>
                   Array.from({ length: 4 }).map((_, col) => (
-                    <circle key={`ae-${row}-${col}`} cx={300 + col * 24} cy={100 + row * 28} r="3" fill="#67E8F9" opacity="0.5">
+                    <circle key={`ae-${row}-${col}`} cx={300 + col * 24} cy={100 + row * 28} r="3" fill="#22D3EE" opacity="0.5">
                       <animate attributeName="opacity" values="0.2;0.9;0.2" dur={`${1.5 + (row + col) * 0.2}s`} repeatCount="indefinite" />
                       <animate attributeName="r" values="2;3.5;2" dur={`${2 + (row + col) * 0.3}s`} repeatCount="indefinite" />
                     </circle>
                   ))
                 )}
-                <text x="337" y="128" textAnchor="middle" className="text-[12px] font-bold" fill="#0E7490">{t('layout.aerationTank')}</text>
-                <text x="337" y="142" textAnchor="middle" className="text-[9px]" fill="#0891B2">5.5 × 6.0 × 4.0 m</text>
+                <text x="337" y="128" textAnchor="middle" className="text-[12px] font-bold" fill="#CFFAFE">{t('layout.aerationTank')}</text>
+                <text x="337" y="142" textAnchor="middle" className="text-[9px]" fill="#22D3EE">5.5 × 6.0 × 4.0 m</text>
 
                 {/* BIO SEDIMENTATION TANK - Center (Ø5.5m circle) */}
-                <circle cx="337" cy="225" r="46" fill="#D1FAE5" stroke="#059669" strokeWidth="2" />
+                <circle cx="337" cy="225" r="46" fill="#064E3B" stroke="#10B981" strokeWidth="2" />
                 {/* Inner circle (feed well) */}
-                <circle cx="337" cy="225" r="18" fill="#A7F3D0" stroke="#10B981" strokeWidth="1" />
+                <circle cx="337" cy="225" r="18" fill="#065F46" stroke="#34D399" strokeWidth="1" />
                 {/* Scraper arms */}
-                <line x1="337" y1="225" x2="337" y2="179" stroke="#059669" strokeWidth="1" opacity="0.5">
+                <line x1="337" y1="225" x2="337" y2="179" stroke="#10B981" strokeWidth="1" opacity="0.5">
                   <animateTransform attributeName="transform" type="rotate" from="0 337 225" to="360 337 225" dur="15s" repeatCount="indefinite" />
                 </line>
-                <text x="337" y="222" textAnchor="middle" className="text-[11px] font-bold" fill="#065F46">{t('layout.bioSedTank')}</text>
-                <text x="337" y="236" textAnchor="middle" className="text-[9px]" fill="#059669">Ø5.50 × 3.5 m</text>
+                <text x="337" y="222" textAnchor="middle" className="text-[11px] font-bold" fill="#D1FAE5">{t('layout.bioSedTank')}</text>
+                <text x="337" y="236" textAnchor="middle" className="text-[9px]" fill="#10B981">Ø5.50 × 3.5 m</text>
 
                 {/* HOLDING TANK - Right side (7.0 × ~6.0m) */}
-                <rect x="401" y="82" width="108" height="144" rx="4" fill="#EDE9FE" stroke="#7C3AED" strokeWidth="2" />
-                <text x="455" y="155" textAnchor="middle" className="text-[12px] font-bold" fill="#5B21B6">{t('layout.holdingTank')}</text>
-                <text x="455" y="170" textAnchor="middle" className="text-[9px]" fill="#7C3AED">13.0 × 7.0 × 3.0 m</text>
+                <rect x="401" y="82" width="108" height="144" rx="4" fill="#2E1065" stroke="#8B5CF6" strokeWidth="2" />
+                <text x="455" y="155" textAnchor="middle" className="text-[12px] font-bold" fill="#EDE9FE">{t('layout.holdingTank')}</text>
+                <text x="455" y="170" textAnchor="middle" className="text-[9px]" fill="#A78BFA">13.0 × 7.0 × 3.0 m</text>
 
                 {/* SLUDGE HOLDING TANK - Bottom-right (2.0 × 2.0m) */}
-                <rect x="479" y="237" width="30" height="30" rx="2" fill="#FEF3C7" stroke="#D97706" strokeWidth="1.5" />
-                <text x="494" y="254" textAnchor="middle" className="text-[7px] font-bold" fill="#92400E">{t('layout.sludgeTank')}</text>
-                <text x="494" y="262" textAnchor="middle" className="text-[6px]" fill="#D97706">2×2×2m</text>
+                <rect x="479" y="237" width="30" height="30" rx="2" fill="#451A03" stroke="#F59E0B" strokeWidth="1.5" />
+                <text x="494" y="254" textAnchor="middle" className="text-[7px] font-bold" fill="#FEF3C7">{t('layout.sludgeTank')}</text>
+                <text x="494" y="262" textAnchor="middle" className="text-[6px]" fill="#FBBF24">2×2×2m</text>
 
                 {/* ===== FLOW ARROWS ===== */}
 
                 {/* Wastewater IN → EQ Tank */}
-                <line x1="15" y1="195" x2="72" y2="195" stroke="#2563EB" strokeWidth="2" markerEnd="url(#flowArrowBlue)" strokeDasharray="6,3">
+                <line x1="15" y1="195" x2="72" y2="195" stroke="#3B82F6" strokeWidth="2" markerEnd="url(#flowArrowBlue)" strokeDasharray="6,3">
                   <animate attributeName="stroke-dashoffset" from="18" to="0" dur="1.5s" repeatCount="indefinite" />
                 </line>
 
                 {/* EQ Tank → Aeration Tank */}
-                <path d="M 273 145 L 280 145" stroke="#0891B2" strokeWidth="2" markerEnd="url(#flowArrowBlue)" strokeDasharray="5,3">
+                <path d="M 273 145 L 280 145" stroke="#06B6D4" strokeWidth="2" markerEnd="url(#flowArrowBlue)" strokeDasharray="5,3">
                   <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.5s" repeatCount="indefinite" />
                 </path>
 
@@ -130,39 +128,39 @@ export default function SiteLayout() {
                 </line>
 
                 {/* Bio Sed Tank → Holding Tank */}
-                <path d="M 383 210 L 398 170" stroke="#7C3AED" strokeWidth="2" markerEnd="url(#flowArrowGreen)" strokeDasharray="5,3">
+                <path d="M 383 210 L 398 170" stroke="#8B5CF6" strokeWidth="2" markerEnd="url(#flowArrowGreen)" strokeDasharray="5,3">
                   <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.5s" repeatCount="indefinite" />
                 </path>
 
                 {/* Holding Tank → Effluent OUT */}
-                <line x1="509" y1="155" x2="580" y2="155" stroke="#059669" strokeWidth="2" markerEnd="url(#flowArrowGreen)" strokeDasharray="6,3">
+                <line x1="509" y1="155" x2="580" y2="155" stroke="#10B981" strokeWidth="2" markerEnd="url(#flowArrowGreen)" strokeDasharray="6,3">
                   <animate attributeName="stroke-dashoffset" from="18" to="0" dur="1.5s" repeatCount="indefinite" />
                 </line>
 
                 {/* Bio Sed Tank → Sludge Holding Tank */}
-                <path d="M 370 255 L 476 255" stroke="#D97706" strokeWidth="1.5" markerEnd="url(#flowArrowAmber)" strokeDasharray="4,3">
+                <path d="M 370 255 L 476 255" stroke="#F59E0B" strokeWidth="1.5" markerEnd="url(#flowArrowAmber)" strokeDasharray="4,3">
                   <animate attributeName="stroke-dashoffset" from="14" to="0" dur="2s" repeatCount="indefinite" />
                 </path>
 
                 {/* ===== LABELS ===== */}
 
                 {/* Waste Water IN label */}
-                <text x="10" y="183" className="text-[10px] font-bold" fill="#2563EB">{t('layout.wastewaterIn')}</text>
+                <text x="10" y="183" className="text-[10px] font-bold" fill="#3B82F6">{t('layout.wastewaterIn')}</text>
                 <text x="10" y="193" className="text-[8px]" fill="#64748B">→</text>
 
                 {/* Effluent OUT label */}
-                <text x="550" y="143" className="text-[10px] font-bold" fill="#059669">{t('layout.effluentOut')}</text>
+                <text x="550" y="143" className="text-[10px] font-bold" fill="#10B981">{t('layout.effluentOut')}</text>
                 <text x="550" y="153" className="text-[8px]" fill="#64748B">→</text>
 
                 {/* Pond 5 label */}
-                <text x="535" y="78" className="text-[14px] font-bold" fill="#475569">{t('layout.pond5')}</text>
+                <text x="535" y="78" className="text-[14px] font-bold" fill="#CBD5E1">{t('layout.pond5')}</text>
 
                 {/* ===== DIMENSION LINES ===== */}
 
                 {/* Top: 26.90m total width */}
-                <line x1="50" y1="48" x2="534" y2="48" stroke="#94A3B8" strokeWidth="0.8" />
-                <line x1="50" y1="44" x2="50" y2="52" stroke="#94A3B8" strokeWidth="0.8" />
-                <line x1="534" y1="44" x2="534" y2="52" stroke="#94A3B8" strokeWidth="0.8" />
+                <line x1="50" y1="48" x2="534" y2="48" stroke="#475569" strokeWidth="0.8" />
+                <line x1="50" y1="44" x2="50" y2="52" stroke="#475569" strokeWidth="0.8" />
+                <line x1="534" y1="44" x2="534" y2="52" stroke="#475569" strokeWidth="0.8" />
                 <text x="292" y="45" textAnchor="middle" className="text-[9px]" fill="#94A3B8">26.90 m</text>
 
                 {/* Top sub-dimensions */}

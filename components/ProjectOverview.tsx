@@ -19,7 +19,7 @@ export default function ProjectOverview() {
   ];
 
   return (
-    <section id="overview" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="overview" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           title={t('overview.title')}
@@ -29,12 +29,15 @@ export default function ProjectOverview() {
 
         {/* Narrative */}
         <ScrollReveal className="max-w-4xl mx-auto mb-16">
-          <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 md:p-10 border border-blue-100">
-            <h3 className="text-xl font-semibold text-text-primary mb-4">{t('overview.howTitle')}</h3>
-            <div className="space-y-4 text-text-primary text-lg font-medium leading-relaxed">
-              <p>{t('overview.howP1')}</p>
-              <p>{t('overview.howP2')}</p>
-              <p>{t('overview.howP3')}</p>
+          <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 border border-white/5 shadow-2xl relative overflow-hidden group">
+            {/* Decorative background element */}
+            <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+            
+            <h3 className="text-2xl font-black text-white mb-6 relative z-10">{t('overview.howTitle')}</h3>
+            <div className="space-y-6 text-slate-300 text-lg font-medium leading-relaxed relative z-10">
+              <p className="border-l-4 border-primary pl-6">{t('overview.howP1')}</p>
+              <p className="border-l-4 border-accent pl-6">{t('overview.howP2')}</p>
+              <p className="border-l-4 border-secondary pl-6">{t('overview.howP3')}</p>
             </div>
           </div>
         </ScrollReveal>

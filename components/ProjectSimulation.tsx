@@ -8,7 +8,7 @@ export default function ProjectSimulation() {
   const { t } = useLang();
 
   return (
-    <section id="simulation" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-slate-50">
+    <section id="simulation" className="py-20 md:py-28 px-4 sm:px-6 lg:px-8 bg-background">
       <div className="max-w-7xl mx-auto">
         <SectionHeader
           icon={Camera}

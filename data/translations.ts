@@ -104,15 +104,15 @@ export const translations: Record<string, LangMap> = {
   'equip.subtitle': { en: 'Every piece of equipment and its role in the treatment process — where it is and what it does.', th: 'อุปกรณ์ทุกชิ้นและบทบาทในกระบวนการบำบัด — อยู่ที่ไหนและทำหน้าที่อะไร' },
 
   // === BOQ ===
-  'boq.badge': { en: 'Cost Analysis', th: 'วิเคราะห์ต้นทุน' },
+  'boq.badge': { en: 'Project Summary', th: 'สรุปรายการ' },
   'boq.title': { en: 'BOQ Summary', th: 'สรุปประมาณการ' },
-  'boq.subtitle': { en: 'Complete Bill of Quantities breakdown — materials, labor, and project costs.', th: 'รายละเอียดประมาณการทั้งหมด — วัสดุ แรงงาน และต้นทุนโครงการ' },
+  'boq.subtitle': { en: 'Complete Bill of Quantities breakdown — materials and labor.', th: 'รายละเอียดประมาณการทั้งหมด — วัสดุ และแรงงาน' },
   'boq.grandTotalLabel': { en: 'Grand Total (incl. VAT 7%)', th: 'มูลค่ารวม (รวม VAT 7%)' },
   'boq.thaiBaht': { en: 'Thai Baht', th: 'บาท' },
-  'boq.costDist': { en: 'Cost Distribution', th: 'สัดส่วนต้นทุน' },
+  'boq.costDist': { en: 'Budget Distribution', th: 'สัดส่วนงบประมาณ' },
   'boq.materialsTotal': { en: 'Materials Total', th: 'รวมวัสดุ' },
-  'boq.costComparison': { en: 'Cost Comparison by Category', th: 'เปรียบเทียบต้นทุนตามหมวด' },
-  'boq.costSummary': { en: 'Cost Summary', th: 'สรุปต้นทุน' },
+  'boq.costComparison': { en: 'Comparison by Category', th: 'เปรียบเทียบตามหมวด' },
+  'boq.costSummary': { en: 'Budget Summary', th: 'สรุปงบประมาณ' },
   'boq.sumMaterials': { en: 'Sum of Materials Price', th: 'รวมราคาวัสดุ' },
   'boq.knowHow': { en: 'Know-how, Trial, Test Run & Commissioning', th: 'ค่าความรู้ ทดลอง ทดสอบ และส่งมอบ' },
   'boq.total': { en: 'Total', th: 'รวม' },
@@ -128,9 +128,9 @@ export const translations: Record<string, LangMap> = {
   'visual.processSchematic': { en: 'Simplified Process Schematic', th: 'แผนผังกระบวนการอย่างง่าย' },
 
   // === Technical Details ===
-  'tech.badge': { en: 'BOQ Details', th: 'รายละเอียด BOQ' },
+  'tech.badge': { en: 'Technical Data', th: 'ข้อมูลทางเทคนิค' },
   'tech.title': { en: 'Technical Details', th: 'รายละเอียดทางเทคนิค' },
-  'tech.subtitle': { en: 'Detailed breakdown of every work category — items, specs, locations, and costs.', th: 'รายละเอียดทุกหมวดงาน — รายการ สเปค ตำแหน่ง และต้นทุน' },
+  'tech.subtitle': { en: 'Detailed breakdown of every work category — items, specs, and locations.', th: 'รายละเอียดทุกหมวดงาน — รายการ สเปค และตำแหน่ง' },
   'tech.location': { en: 'Location', th: 'ตำแหน่ง' },
   'tech.function': { en: 'Function', th: 'หน้าที่' },
   'tech.importance': { en: 'Importance', th: 'ความสำคัญ' },

@@ -34,9 +34,9 @@ export default function HeroSection() {
             <span className="text-white/90 text-sm font-medium">{t('hero.badge')}</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight tracking-tight mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-snug tracking-tight mb-6">
             Golden Thread
-            <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mt-2">
+            <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mt-2 py-2">
               {t('hero.title1')}
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl font-light text-white/80 mt-2">

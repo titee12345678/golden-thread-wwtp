@@ -70,8 +70,8 @@ export default function ProcessFlow() {
 
                   {/* Step Card */}
                   <div
-                    className="flex-1 rounded-2xl bg-white border-4 p-6 transition-all shadow-md hover:shadow-lg"
-                    style={{ borderColor: step.color }}
+                    className="flex-1 rounded-2xl border-4 p-6 transition-all shadow-md hover:shadow-lg"
+                    style={{ borderColor: step.color, backgroundColor: step.color + '12' }}
                   >
                     <div className="flex items-center justify-between mb-4">
                       <div className="flex items-center gap-3">
@@ -110,23 +110,6 @@ export default function ProcessFlow() {
             ))}
           </div>
         </div>
-
-        {/* Engineering Flow Diagram Reference */}
-        <ScrollReveal className="mt-12">
-          <div className="glass-card p-4 md:p-6">
-            <h3 className="font-semibold text-text-primary mb-4 text-sm">
-              {t('process.badge')} — Flow Diagram
-            </h3>
-            <div className="rounded-lg overflow-hidden border border-border">
-              <img
-                src="/images/flow-diagram.png"
-                alt="Engineering flow diagram"
-                className="w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );

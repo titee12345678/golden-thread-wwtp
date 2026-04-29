@@ -10,6 +10,8 @@ const navLinks = [
   { id: 'process', key: 'nav.process' },
   { id: 'equipment', key: 'nav.equipment' },
   { id: 'visuals', key: 'nav.visuals' },
+  { id: 'environment', key: 'env.badge' },
+  { id: 'daily-operation', key: 'daily.badge' },
   { id: 'details', key: 'nav.details' },
 ] as const;
 
@@ -81,12 +83,12 @@ export default function Navbar() {
           </button>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
+          <div className="hidden lg:flex items-center gap-1">
+            {navLinks.filter(l => l.id !== 'simulation' && l.id !== 'visuals').map((link) => (
               <button
                 key={link.id}
                 onClick={() => scrollTo(link.id)}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
+                className={`px-3 py-2 rounded-lg text-[15px] font-medium transition-all duration-200 whitespace-nowrap ${
                   activeSection === link.id
                     ? 'bg-primary/10 text-primary'
                     : scrolled
@@ -114,7 +116,7 @@ export default function Navbar() {
           </div>
 
           {/* Mobile: Lang Toggle + Menu */}
-          <div className="md:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-2">
             <button
               onClick={toggleLang}
               className={`flex items-center gap-1 px-2.5 py-1.5 rounded-full text-xs font-bold border transition-colors ${
@@ -140,7 +142,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-b border-border animate-fade-in">
+        <div className="lg:hidden bg-white/95 backdrop-blur-xl border-b border-border animate-fade-in">
           <div className="px-4 py-3 space-y-1">
             {navLinks.map((link) => (
               <button

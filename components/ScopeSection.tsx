@@ -10,7 +10,7 @@ export default function ScopeSection() {
   const scopeItems = [
     { labelEN: 'Existing Wastewater Collection Area', labelTH: 'พื้นที่รวบรวมน้ำเสียเดิม', descEN: 'The existing factory wastewater collection infrastructure (Ponds 1–4) that feeds into the new treatment system.', descTH: 'โครงสร้างพื้นฐานเดิมสำหรับรวบรวมน้ำเสียจากโรงงาน (บ่อ 1–4) ที่ส่งน้ำเสียเข้าระบบใหม่', statusEN: 'Existing infrastructure', statusTH: 'โครงสร้างเดิม' },
     { labelEN: 'Existing Inlet & Sump Area', labelTH: 'จุดรับน้ำเสียและบ่อพักเดิม', descEN: 'The existing sump tank and inlet structures that collect and channel raw wastewater from the production facility.', descTH: 'บ่อพักและโครงสร้างรับน้ำเสียเดิมที่รวบรวมน้ำเสียจากโรงงานผลิต', statusEN: 'Interface point', statusTH: 'จุดเชื่อมต่อ' },
-    { labelEN: 'Tie-in Point from Existing System', labelTH: 'จุดเชื่อมระบบเดิม', descEN: 'The physical connection point where the existing wastewater piping meets the new Equalization Tank inlet. This is the boundary between existing and new scope.', descTH: 'จุดเชื่อมต่อทางกายภาพระหว่างท่อน้ำเสียเดิมกับถังปรับเสมอใหม่ เป็นขอบเขตระหว่างงานเดิมกับงานใหม่', statusEN: 'Scope boundary', statusTH: 'ขอบเขตงาน' },
+    { labelEN: 'Tie-in Point from Existing System', labelTH: 'จุดเชื่อมระบบเดิม', descEN: 'The physical connection point where the existing wastewater piping meets the new Equalization Tank inlet. This is the boundary between existing and new scope.', descTH: 'จุดเชื่อมต่อทางกายภาพระหว่างท่อน้ำเสียเดิมกับถังปรับสมดุลใหม่ เป็นขอบเขตระหว่างงานเดิมกับงานใหม่', statusEN: 'Scope boundary', statusTH: 'ขอบเขตงาน' },
   ];
 
   const newScopeEN = [
@@ -21,7 +21,7 @@ export default function ScopeSection() {
     'Site preparation and project management', 'Engineering design and commissioning',
   ];
   const newScopeTH = [
-    'ถังปรับเสมอ (13.0 × 11.0 × 4.0 ม.)', 'ถังเติมอากาศ (5.5 × 6.0 × 4.0 ม.)',
+    'ถังปรับสมดุล (13.0 × 11.0 × 4.0 ม.)', 'ถังเติมอากาศ (5.5 × 6.0 × 4.0 ม.)',
     'ถังตกตะกอนชีวภาพ (Ø5.5 × 3.5 ม.)', 'ถังพักน้ำ (13.0 × 7.0 × 3.0 ม.)',
     'ถังเก็บสลัดตะกอน (2.0 × 2.0 × 2.0 ม.)', 'อุปกรณ์เครื่องกลทั้งหมด (ปั๊ม เครื่องเป่าลม หัวจ่ายอากาศ)',
     'ท่อ วาล์ว และเครื่องมือวัด', 'ระบบไฟฟ้าและตู้ควบคุม',

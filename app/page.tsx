@@ -9,6 +9,8 @@ import BOQSummary from '@/components/BOQSummary';
 import VisualExplanation from '@/components/VisualExplanation';
 import TechnicalDetails from '@/components/TechnicalDetails';
 import ScopeSection from '@/components/ScopeSection';
+import EnvironmentalAnalysis from '@/components/EnvironmentalAnalysis';
+import DailyOperationFlow from '@/components/DailyOperationFlow';
 import Footer from '@/components/Footer';
 import PasscodeGate from '@/components/PasscodeGate';
 
@@ -22,9 +24,11 @@ export default function Home() {
         <ProjectOverview />
         <SiteLayout />
         <ProcessFlow />
+        <VisualExplanation />
         <EquipmentMapping />
         {/* <BOQSummary /> */}
-        <VisualExplanation />
+        <EnvironmentalAnalysis />
+        <DailyOperationFlow />
         <TechnicalDetails />
         <ScopeSection />
       </main>

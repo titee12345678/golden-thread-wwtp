@@ -40,14 +40,17 @@ export default function SiteLayout() {
                     <line x1="0" y1="0" x2="0" y2="6" stroke="#E2E8F0" strokeWidth="0.5" />
                   </pattern>
                   {/* Flow arrow marker */}
-                  <marker id="flowArrowBlue" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+                  <marker id="flowArrowBlue" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto">
                     <path d="M 0 0 L 10 4 L 0 8 z" fill="#2563EB" opacity="0.7" />
                   </marker>
-                  <marker id="flowArrowGreen" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+                  <marker id="flowArrowGreen" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto">
                     <path d="M 0 0 L 10 4 L 0 8 z" fill="#059669" opacity="0.7" />
                   </marker>
-                  <marker id="flowArrowAmber" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto-start-auto">
+                  <marker id="flowArrowAmber" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto">
                     <path d="M 0 0 L 10 4 L 0 8 z" fill="#D97706" opacity="0.7" />
+                  </marker>
+                  <marker id="flowArrowTeal" viewBox="0 0 10 8" refX="10" refY="4" markerWidth="8" markerHeight="6" orient="auto">
+                    <path d="M 0 0 L 10 4 L 0 8 z" fill="#0D9488" opacity="0.7" />
                   </marker>
                 </defs>
 
@@ -103,14 +106,14 @@ export default function SiteLayout() {
                 <text x="337" y="236" textAnchor="middle" className="text-[9px]" fill="#059669">Ø5.50 × 3.5 m</text>
 
                 {/* HOLDING TANK - Right side (7.0 × ~6.0m) */}
-                <rect x="401" y="82" width="108" height="144" rx="4" fill="#EDE9FE" stroke="#7C3AED" strokeWidth="2" />
-                <text x="455" y="155" textAnchor="middle" className="text-[12px] font-bold" fill="#5B21B6">{t('layout.holdingTank')}</text>
-                <text x="455" y="170" textAnchor="middle" className="text-[9px]" fill="#7C3AED">13.0 × 7.0 × 3.0 m</text>
+                <rect x="401" y="82" width="108" height="144" rx="4" fill="#F0FDFA" stroke="#0D9488" strokeWidth="2" />
+                <text x="455" y="155" textAnchor="middle" className="text-[12px] font-bold" fill="#115E59">{t('layout.holdingTank')}</text>
+                <text x="455" y="170" textAnchor="middle" className="text-[9px]" fill="#0D9488">13.0 × 7.0 × 3.0 m</text>
 
                 {/* SLUDGE HOLDING TANK - Bottom-right (2.0 × 2.0m) */}
                 <rect x="479" y="237" width="30" height="30" rx="2" fill="#FEF3C7" stroke="#D97706" strokeWidth="1.5" />
-                <text x="494" y="254" textAnchor="middle" className="text-[7px] font-bold" fill="#92400E">{t('layout.sludgeTank')}</text>
-                <text x="494" y="262" textAnchor="middle" className="text-[6px]" fill="#D97706">2×2×2m</text>
+                <text x="494" y="278" textAnchor="middle" className="text-[8px] font-bold" fill="#92400E">{t('layout.sludgeTank')}</text>
+                <text x="494" y="288" textAnchor="middle" className="text-[7px]" fill="#D97706">2×2×2m</text>
 
                 {/* ===== FLOW ARROWS ===== */}
 
@@ -124,13 +127,13 @@ export default function SiteLayout() {
                   <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.5s" repeatCount="indefinite" />
                 </path>
 
-                {/* Aeration Tank → Bio Sed Tank */}
-                <line x1="337" y1="181" x2="337" y2="177" stroke="#10B981" strokeWidth="2" markerEnd="url(#flowArrowGreen)" strokeDasharray="4,2">
+                {/* Aeration Tank → Bio Sed Tank (Pointing DOWN) */}
+                <line x1="337" y1="175" x2="337" y2="185" stroke="#10B981" strokeWidth="2" markerEnd="url(#flowArrowGreen)" strokeDasharray="4,2">
                   <animate attributeName="stroke-dashoffset" from="12" to="0" dur="1.5s" repeatCount="indefinite" />
                 </line>
 
                 {/* Bio Sed Tank → Holding Tank */}
-                <path d="M 383 210 L 398 170" stroke="#7C3AED" strokeWidth="2" markerEnd="url(#flowArrowGreen)" strokeDasharray="5,3">
+                <path d="M 380 205 L 398 170" stroke="#0D9488" strokeWidth="2" markerEnd="url(#flowArrowTeal)" strokeDasharray="5,3">
                   <animate attributeName="stroke-dashoffset" from="16" to="0" dur="1.5s" repeatCount="indefinite" />
                 </path>
 
@@ -166,17 +169,17 @@ export default function SiteLayout() {
                 <text x="292" y="45" textAnchor="middle" className="text-[9px]" fill="#94A3B8">26.90 m</text>
 
                 {/* Top sub-dimensions */}
-                <line x1="65" y1="56" x2="273" y2="56" stroke="#CBD5E1" strokeWidth="0.5" />
-                <text x="169" y="55" textAnchor="middle" className="text-[7px]" fill="#CBD5E1">11.00</text>
+                <line x1="65" y1="56" x2="273" y2="56" stroke="#94A3B8" strokeWidth="0.8" strokeDasharray="3,3" />
+                <text x="169" y="53" textAnchor="middle" className="text-[8px]" fill="#64748B">11.00 m</text>
 
-                <line x1="283" y1="56" x2="391" y2="56" stroke="#CBD5E1" strokeWidth="0.5" />
-                <text x="337" y="55" textAnchor="middle" className="text-[7px]" fill="#CBD5E1">6.00</text>
+                <line x1="283" y1="56" x2="391" y2="56" stroke="#94A3B8" strokeWidth="0.8" strokeDasharray="3,3" />
+                <text x="337" y="53" textAnchor="middle" className="text-[8px]" fill="#64748B">6.00 m</text>
 
-                <line x1="401" y1="56" x2="509" y2="56" stroke="#CBD5E1" strokeWidth="0.5" />
-                <text x="455" y="55" textAnchor="middle" className="text-[7px]" fill="#CBD5E1">7.00</text>
+                <line x1="401" y1="56" x2="509" y2="56" stroke="#94A3B8" strokeWidth="0.8" strokeDasharray="3,3" />
+                <text x="455" y="53" textAnchor="middle" className="text-[8px]" fill="#64748B">7.00 m</text>
 
-                <line x1="509" y1="56" x2="534" y2="56" stroke="#CBD5E1" strokeWidth="0.5" />
-                <text x="521" y="55" textAnchor="middle" className="text-[7px]" fill="#CBD5E1">2.00</text>
+                <line x1="509" y1="56" x2="534" y2="56" stroke="#94A3B8" strokeWidth="0.8" strokeDasharray="3,3" />
+                <text x="521" y="53" textAnchor="middle" className="text-[8px]" fill="#64748B">2.00 m</text>
 
                 {/* Right: 13.00m total height */}
                 <line x1="548" y1="60" x2="548" y2="294" stroke="#94A3B8" strokeWidth="0.8" />
@@ -194,7 +197,7 @@ export default function SiteLayout() {
                 <circle cx="265" cy="305" r="5" fill="#D1FAE5" stroke="#059669" strokeWidth="1" />
                 <text x="275" y="309" className="text-[8px]" fill="#64748B">{t('layout.bioSedTank')}</text>
 
-                <rect x="360" y="300" width="10" height="10" rx="2" fill="#EDE9FE" stroke="#7C3AED" strokeWidth="1" />
+                <rect x="360" y="300" width="10" height="10" rx="2" fill="#F0FDFA" stroke="#0D9488" strokeWidth="1" />
                 <text x="375" y="309" className="text-[8px]" fill="#64748B">{t('layout.holdingTank')}</text>
 
                 <rect x="455" y="300" width="10" height="10" rx="2" fill="#FEF3C7" stroke="#D97706" strokeWidth="1" />
@@ -204,8 +207,42 @@ export default function SiteLayout() {
           </div>
         </ScrollReveal>
 
-        {/* Engineering reference image */}
+        {/* Layout Page 1 Engineering Drawing */}
         <ScrollReveal className="mt-8">
+          <div className="glass-card p-4 md:p-6">
+            <h3 className="font-semibold text-text-primary mb-4 text-sm">
+              {lang === 'th' ? 'แบบผังพื้นที่ระบบบำบัด' : 'Treatment System Layout Drawing'} — {lang === 'th' ? 'แบบวิศวกรรม' : 'Engineering Drawing'}
+            </h3>
+            <div className="rounded-lg overflow-hidden border border-border">
+              <img
+                src="/images/layout-page1.png"
+                alt="Layout engineering drawing page 1"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Flow Diagram Engineering Drawing */}
+        <ScrollReveal className="mt-6">
+          <div className="glass-card p-4 md:p-6">
+            <h3 className="font-semibold text-text-primary mb-4 text-sm">
+              {lang === 'th' ? 'แผนผังการไหลของระบบ' : 'System Flow Diagram'} — {lang === 'th' ? 'แบบวิศวกรรม' : 'Engineering Drawing'}
+            </h3>
+            <div className="rounded-lg overflow-hidden border border-border">
+              <img
+                src="/images/flow-diagram-engineering.png"
+                alt="System flow diagram engineering drawing"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Layout Plan Engineering Drawing */}
+        <ScrollReveal className="mt-6">
           <div className="glass-card p-4 md:p-6">
             <h3 className="font-semibold text-text-primary mb-4 text-sm">
               {t('layout.badge')} — {lang === 'th' ? 'แบบวิศวกรรม' : 'Engineering Drawing'}

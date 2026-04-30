@@ -14,9 +14,9 @@ export default function ProcessFlow() {
     { id: 3, nameKey: 'process.s3.name', descKey: 'process.s3.desc', icon: Droplets, color: '#2563EB', bgColor: 'bg-blue-50', borderColor: 'border-blue-200', technical: '13.0 × 11.0 × 4.0 m | 95× Air Diffusers 12" | 2× Submersible Pumps (21 m³/h)' },
     { id: 4, nameKey: 'process.s4.name', descKey: 'process.s4.desc', icon: Wind, color: '#0891B2', bgColor: 'bg-cyan-50', borderColor: 'border-cyan-200', technical: '5.5 × 6.0 × 4.0 m | 35× Air Diffusers 12" | 2× Air Blowers (12 m³/min)' },
     { id: 5, nameKey: 'process.s5.name', descKey: 'process.s5.desc', icon: Filter, color: '#059669', bgColor: 'bg-emerald-50', borderColor: 'border-emerald-200', technical: 'Ø5.5 × 3.5 m | 2× Centrifugal Pumps (12 m³/h) for return/excess sludge' },
-    { id: 6, nameKey: 'process.s6.name', descKey: 'process.s6.desc', icon: Container, color: '#7C3AED', bgColor: 'bg-violet-50', borderColor: 'border-violet-200', technical: '13.0 × 7.0 × 3.0 m | Treated effluent storage' },
+    { id: 6, nameKey: 'process.s6.name', descKey: 'process.s6.desc', icon: Container, color: '#0D9488', bgColor: 'bg-teal-50', borderColor: 'border-teal-200', technical: '13.0 × 7.0 × 3.0 m | Treated effluent storage' },
     { id: 7, nameKey: 'process.s7.name', descKey: 'process.s7.desc', icon: Trash2, color: '#D97706', bgColor: 'bg-amber-50', borderColor: 'border-amber-200', technical: '2.0 × 2.0 × 2.0 m | 2× Sludge Transfer Pumps (21 m³/h)' },
-    { id: 8, nameKey: 'process.s8.name', descKey: 'process.s8.desc', icon: Trash2, color: '#6B7280', bgColor: 'bg-gray-50', borderColor: 'border-gray-200', technical: 'Filter press / dewatering unit → Sludge cake disposal' },
+    { id: 8, nameKey: 'process.s8.name', descKey: 'process.s8.desc', icon: Trash2, color: '#DC2626', bgColor: 'bg-red-50', borderColor: 'border-red-200', technical: 'Filter press / dewatering unit → Sludge cake disposal' },
   ];
 
   const legendItems = [

@@ -169,6 +169,8 @@ export default function VisualExplanation() {
                 <rect x="665" y="245" width="140" height="55" rx="6" fill="#FEF3C7" stroke="#D97706" strokeWidth="1.5" />
                 <text x="735" y="268" textAnchor="middle" className="text-[9px] font-bold" fill="#92400E">{th ? 'ถังเก็บตะกอน (Sludge Tank)' : 'Sludge Tank'}</text>
                 <text x="735" y="283" textAnchor="middle" className="text-[8px]" fill="#D97706">2×2×2 m</text>
+                <circle cx="675" cy="240" r="12" fill="#D97706" />
+                <text x="675" y="244" textAnchor="middle" className="text-[10px] font-bold" fill="white">7</text>
 
                 {/* Sludge Tank → Dewatering */}
                 <line x1="805" y1="272" x2="840" y2="272" stroke="#D97706" strokeWidth="1.5" markerEnd="url(#sludgeArrow)" strokeDasharray="4,3">
@@ -179,6 +181,8 @@ export default function VisualExplanation() {
                 <rect x="840" y="250" width="140" height="45" rx="6" fill="#FEE2E2" stroke="#DC2626" strokeWidth="1" />
                 <text x="910" y="270" textAnchor="middle" className="text-[9px] font-bold" fill="#991B1B">{th ? 'รีดน้ำตะกอน (Dewatering)' : 'Dewatering'}</text>
                 <text x="910" y="283" textAnchor="middle" className="text-[8px]" fill="#DC2626">{th ? '→ กำจัด (Disposal)' : '→ Disposal'}</text>
+                <circle cx="850" cy="245" r="12" fill="#DC2626" />
+                <text x="850" y="249" textAnchor="middle" className="text-[10px] font-bold" fill="white">8</text>
 
                 {/* ===== RETURN SLUDGE LINE (RAS) ===== */}
                 <path d="M 695 152 C 675 200, 595 210, 560 182" stroke="#10B981" strokeWidth="1.5" fill="none" markerEnd="url(#returnArrow)" strokeDasharray="5,3">

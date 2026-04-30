@@ -77,8 +77,14 @@ export default function SiteLayout() {
                     </circle>
                   ))
                 )}
-                <text x="174" y="205" textAnchor="middle" className="text-[13px] font-bold" fill="#1E40AF">{t('layout.eqTank')}</text>
-                <text x="174" y="220" textAnchor="middle" className="text-[9px]" fill="#3B82F6">13.0 × 11.0 × 4.0 m</text>
+                <text x="174" y="200" textAnchor="middle" className="text-[13px] font-bold" fill="#1E40AF">
+                  <tspan x="174" dy="0">{t('layout.eqTank')}</tspan>
+                  <tspan x="174" dy="12" className="text-[10px] font-normal">(EQ Tank)</tspan>
+                </text>
+                <text x="174" y="226" textAnchor="middle" className="text-[9px]" fill="#3B82F6">13.0 × 11.0 × 4.0 m</text>
+                {/* Number Badge */}
+                <circle cx="87" cy="137" r="10" fill="#2563EB" />
+                <text x="87" y="140.5" textAnchor="middle" className="text-[9px] font-bold" fill="white">3</text>
 
                 {/* AERATION TANK - Center-top (6.0 × 5.5m) */}
                 <rect x="283" y="82" width="108" height="99" rx="4" fill="#ECFEFF" stroke="#0891B2" strokeWidth="2" />
@@ -91,8 +97,14 @@ export default function SiteLayout() {
                     </circle>
                   ))
                 )}
-                <text x="337" y="128" textAnchor="middle" className="text-[12px] font-bold" fill="#0E7490">{t('layout.aerationTank')}</text>
-                <text x="337" y="142" textAnchor="middle" className="text-[9px]" fill="#0891B2">5.5 × 6.0 × 4.0 m</text>
+                <text x="337" y="120" textAnchor="middle" className="text-[12px] font-bold" fill="#0E7490">
+                  <tspan x="337" dy="0">{t('layout.aerationTank')}</tspan>
+                  <tspan x="337" dy="12" className="text-[9px] font-normal">(Aeration Tank)</tspan>
+                </text>
+                <text x="337" y="146" textAnchor="middle" className="text-[9px]" fill="#0891B2">5.5 × 6.0 × 4.0 m</text>
+                {/* Number Badge */}
+                <circle cx="295" cy="94" r="10" fill="#0891B2" />
+                <text x="295" y="97.5" textAnchor="middle" className="text-[9px] font-bold" fill="white">4</text>
 
                 {/* BIO SEDIMENTATION TANK - Center (Ø5.5m circle) */}
                 <circle cx="337" cy="225" r="46" fill="#D1FAE5" stroke="#059669" strokeWidth="2" />
@@ -102,18 +114,36 @@ export default function SiteLayout() {
                 <line x1="337" y1="225" x2="337" y2="179" stroke="#059669" strokeWidth="1" opacity="0.5">
                   <animateTransform attributeName="transform" type="rotate" from="0 337 225" to="360 337 225" dur="15s" repeatCount="indefinite" />
                 </line>
-                <text x="337" y="222" textAnchor="middle" className="text-[11px] font-bold" fill="#065F46">{t('layout.bioSedTank')}</text>
-                <text x="337" y="236" textAnchor="middle" className="text-[9px]" fill="#059669">Ø5.50 × 3.5 m</text>
+                <text x="337" y="214" textAnchor="middle" className="text-[11px] font-bold" fill="#065F46">
+                  <tspan x="337" dy="0">{t('layout.bioSedTank')}</tspan>
+                  <tspan x="337" dy="12" className="text-[9px] font-normal">(Bio Sed Tank)</tspan>
+                </text>
+                <text x="337" y="240" textAnchor="middle" className="text-[9px]" fill="#059669">Ø5.50 × 3.5 m</text>
+                {/* Number Badge */}
+                <circle cx="303" cy="193" r="10" fill="#059669" />
+                <text x="303" y="196.5" textAnchor="middle" className="text-[9px] font-bold" fill="white">5</text>
 
                 {/* HOLDING TANK - Right side (7.0 × ~6.0m) */}
                 <rect x="401" y="82" width="108" height="144" rx="4" fill="#F0FDFA" stroke="#0D9488" strokeWidth="2" />
-                <text x="455" y="155" textAnchor="middle" className="text-[12px] font-bold" fill="#115E59">{t('layout.holdingTank')}</text>
-                <text x="455" y="170" textAnchor="middle" className="text-[9px]" fill="#0D9488">13.0 × 7.0 × 3.0 m</text>
+                <text x="455" y="147" textAnchor="middle" className="text-[12px] font-bold" fill="#115E59">
+                  <tspan x="455" dy="0">{t('layout.holdingTank')}</tspan>
+                  <tspan x="455" dy="12" className="text-[9px] font-normal">(Holding Tank)</tspan>
+                </text>
+                <text x="455" y="173" textAnchor="middle" className="text-[9px]" fill="#0D9488">13.0 × 7.0 × 3.0 m</text>
+                {/* Number Badge */}
+                <circle cx="413" cy="94" r="10" fill="#0D9488" />
+                <text x="413" y="97.5" textAnchor="middle" className="text-[9px] font-bold" fill="white">6</text>
 
                 {/* SLUDGE HOLDING TANK - Bottom-right (2.0 × 2.0m) */}
                 <rect x="479" y="237" width="30" height="30" rx="2" fill="#FEF3C7" stroke="#D97706" strokeWidth="1.5" />
-                <text x="494" y="278" textAnchor="middle" className="text-[8px] font-bold" fill="#92400E">{t('layout.sludgeTank')}</text>
-                <text x="494" y="288" textAnchor="middle" className="text-[7px]" fill="#D97706">2×2×2m</text>
+                <text x="494" y="271" textAnchor="middle" className="text-[8px] font-bold" fill="#92400E">
+                  <tspan x="494" dy="0">{t('layout.sludgeTank')}</tspan>
+                  <tspan x="494" dy="9" className="text-[7px] font-normal">(Sludge Tank)</tspan>
+                </text>
+                <text x="494" y="291" textAnchor="middle" className="text-[7px]" fill="#D97706">2×2×2m</text>
+                {/* Number Badge */}
+                <circle cx="479" cy="237" r="8" fill="#D97706" />
+                <text x="479" y="239.5" textAnchor="middle" className="text-[7px] font-bold" fill="white">7</text>
 
                 {/* ===== FLOW ARROWS ===== */}
 
@@ -150,15 +180,27 @@ export default function SiteLayout() {
                 {/* ===== LABELS ===== */}
 
                 {/* Waste Water IN label */}
-                <text x="10" y="183" className="text-[10px] font-bold" fill="#2563EB">{t('layout.wastewaterIn')}</text>
+                <text x="10" y="181" className="text-[10px] font-bold" fill="#2563EB">
+                  <tspan x="10" dy="0">{t('layout.wastewaterIn')}</tspan>
+                  <tspan x="10" dy="12" className="text-[8px] font-normal">(Influent)</tspan>
+                </text>
                 <text x="10" y="193" className="text-[8px]" fill="#64748B">→</text>
+                {/* Number Badge for Influent */}
+                <circle cx="28" cy="165" r="9" fill="#D97706" />
+                <text x="28" y="168" textAnchor="middle" className="text-[8px] font-bold" fill="white">1</text>
 
                 {/* Effluent OUT label */}
-                <text x="550" y="143" className="text-[10px] font-bold" fill="#059669">{t('layout.effluentOut')}</text>
+                <text x="550" y="135" className="text-[10px] font-bold" fill="#059669">
+                  <tspan x="550" dy="0">{t('layout.effluentOut')}</tspan>
+                  <tspan x="550" dy="12" className="text-[8px] font-normal">(Effluent)</tspan>
+                </text>
                 <text x="550" y="153" className="text-[8px]" fill="#64748B">→</text>
 
                 {/* Pond 5 label */}
-                <text x="535" y="78" className="text-[14px] font-bold" fill="#475569">{t('layout.pond5')}</text>
+                <text x="535" y="70" className="text-[14px] font-bold" fill="#475569">
+                  <tspan x="535" dy="0">{t('layout.pond5')}</tspan>
+                  <tspan x="535" dy="14" className="text-[10px] font-normal">(Pond 5)</tspan>
+                </text>
 
                 {/* ===== DIMENSION LINES ===== */}
 
@@ -188,20 +230,20 @@ export default function SiteLayout() {
                 <text x="560" y="180" textAnchor="middle" className="text-[9px]" fill="#94A3B8" transform="rotate(90, 560, 180)">13.00 m</text>
 
                 {/* ===== LEGEND ===== */}
-                <rect x="65" y="300" width="10" height="10" rx="2" fill="url(#waterPattern)" stroke="#2563EB" strokeWidth="1" />
-                <text x="80" y="309" className="text-[8px]" fill="#64748B">{t('layout.eqTank')}</text>
+                <rect x="25" y="300" width="10" height="10" rx="2" fill="url(#waterPattern)" stroke="#2563EB" strokeWidth="1" />
+                <text x="40" y="309" className="text-[8px]" fill="#64748B">{t('layout.eqTank')} (EQ Tank)</text>
 
-                <rect x="155" y="300" width="10" height="10" rx="2" fill="#ECFEFF" stroke="#0891B2" strokeWidth="1" />
-                <text x="170" y="309" className="text-[8px]" fill="#64748B">{t('layout.aerationTank')}</text>
+                <rect x="140" y="300" width="10" height="10" rx="2" fill="#ECFEFF" stroke="#0891B2" strokeWidth="1" />
+                <text x="155" y="309" className="text-[8px]" fill="#64748B">{t('layout.aerationTank')} (Aeration Tank)</text>
 
                 <circle cx="265" cy="305" r="5" fill="#D1FAE5" stroke="#059669" strokeWidth="1" />
-                <text x="275" y="309" className="text-[8px]" fill="#64748B">{t('layout.bioSedTank')}</text>
+                <text x="275" y="309" className="text-[8px]" fill="#64748B">{t('layout.bioSedTank')} (Bio Sed)</text>
 
                 <rect x="360" y="300" width="10" height="10" rx="2" fill="#F0FDFA" stroke="#0D9488" strokeWidth="1" />
-                <text x="375" y="309" className="text-[8px]" fill="#64748B">{t('layout.holdingTank')}</text>
+                <text x="375" y="309" className="text-[8px]" fill="#64748B">{t('layout.holdingTank')} (Holding Tank)</text>
 
-                <rect x="455" y="300" width="10" height="10" rx="2" fill="#FEF3C7" stroke="#D97706" strokeWidth="1" />
-                <text x="470" y="309" className="text-[8px]" fill="#64748B">{t('layout.sludgeTank')}</text>
+                <rect x="465" y="300" width="10" height="10" rx="2" fill="#FEF3C7" stroke="#D97706" strokeWidth="1" />
+                <text x="480" y="309" className="text-[8px]" fill="#64748B">{t('layout.sludgeTank')} (Sludge Tank)</text>
               </svg>
             </div>
           </div>
@@ -224,22 +266,7 @@ export default function SiteLayout() {
           </div>
         </ScrollReveal>
 
-        {/* Flow Diagram Engineering Drawing */}
-        <ScrollReveal className="mt-6">
-          <div className="glass-card p-4 md:p-6">
-            <h3 className="font-semibold text-text-primary mb-4 text-sm">
-              {lang === 'th' ? 'แผนผังการไหลของระบบ' : 'System Flow Diagram'} — {lang === 'th' ? 'แบบวิศวกรรม' : 'Engineering Drawing'}
-            </h3>
-            <div className="rounded-lg overflow-hidden border border-border">
-              <img
-                src="/images/flow-diagram-engineering.png"
-                alt="System flow diagram engineering drawing"
-                className="w-full h-auto"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </ScrollReveal>
+
 
         {/* Layout Plan Engineering Drawing */}
         <ScrollReveal className="mt-6">
@@ -254,6 +281,76 @@ export default function SiteLayout() {
                 className="w-full h-auto"
                 loading="lazy"
               />
+            </div>
+          </div>
+        </ScrollReveal>
+
+        {/* Flow Diagram Engineering Drawing */}
+        <ScrollReveal className="mt-6">
+          <div className="glass-card p-4 md:p-6">
+            <h3 className="font-semibold text-text-primary mb-4 text-sm">
+              {lang === 'th' ? 'แผนผังการไหลของระบบ' : 'System Flow Diagram'} — {lang === 'th' ? 'แบบวิศวกรรม' : 'Engineering Drawing'}
+            </h3>
+            <div className="relative rounded-lg overflow-hidden border border-border">
+              <img
+                src="/images/flow-diagram-engineering.png"
+                alt="System flow diagram engineering drawing"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+              {/* Overlay Badges for Flow Alignment (Simple Circles to avoid blocking) */}
+              {/* 1. Influent */}
+              <div className="absolute flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-amber-600 text-white font-bold text-[10px] md:text-xs shadow-md" style={{ top: '34%', left: '5%' }}>1</div>
+              {/* 2. Sump Tank */}
+              <div className="absolute flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-stone-500 text-white font-bold text-[10px] md:text-xs shadow-md" style={{ top: '35%', left: '16%' }}>2</div>
+              {/* 3. EQ Tank */}
+              <div className="absolute flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-blue-600 text-white font-bold text-[10px] md:text-xs shadow-md" style={{ top: '37%', left: '38%' }}>3</div>
+              {/* 4. Aeration Tank */}
+              <div className="absolute flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-cyan-600 text-white font-bold text-[10px] md:text-xs shadow-md" style={{ top: '37%', left: '64%' }}>4</div>
+              {/* 5. Bio Sed Tank */}
+              <div className="absolute flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-emerald-600 text-white font-bold text-[10px] md:text-xs shadow-md" style={{ top: '55%', left: '21%' }}>5</div>
+              {/* 6. Holding Tank */}
+              <div className="absolute flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-teal-600 text-white font-bold text-[10px] md:text-xs shadow-md" style={{ top: '58%', left: '39%' }}>6</div>
+              {/* 7. Sludge Tank */}
+              <div className="absolute flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-amber-600 text-white font-bold text-[10px] md:text-xs shadow-md" style={{ top: '74%', left: '19%' }}>7</div>
+              {/* 8. Dewatering */}
+              <div className="absolute flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-red-600 text-white font-bold text-[10px] md:text-xs shadow-md" style={{ top: '74%', left: '38%' }}>8</div>
+            </div>
+
+            {/* Legend for Flow Diagram */}
+            <div className="mt-5 grid grid-cols-2 md:grid-cols-4 gap-x-4 gap-y-3 pt-5 border-t border-slate-100">
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 shrink-0 rounded-full bg-amber-600 text-white flex items-center justify-center text-[10px] font-bold">1</div>
+                <span className="text-[11px] md:text-xs font-medium text-slate-700">{t('layout.wastewaterIn')}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 shrink-0 rounded-full bg-stone-500 text-white flex items-center justify-center text-[10px] font-bold">2</div>
+                <span className="text-[11px] md:text-xs font-medium text-slate-700">{lang === 'th' ? 'บ่อรับน้ำเสียเดิม' : 'Existing Sump'}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 shrink-0 rounded-full bg-blue-600 text-white flex items-center justify-center text-[10px] font-bold">3</div>
+                <span className="text-[11px] md:text-xs font-medium text-slate-700">{t('layout.eqTank')}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 shrink-0 rounded-full bg-cyan-600 text-white flex items-center justify-center text-[10px] font-bold">4</div>
+                <span className="text-[11px] md:text-xs font-medium text-slate-700">{t('layout.aerationTank')}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 shrink-0 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px] font-bold">5</div>
+                <span className="text-[11px] md:text-xs font-medium text-slate-700">{t('layout.bioSedTank')}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 shrink-0 rounded-full bg-teal-600 text-white flex items-center justify-center text-[10px] font-bold">6</div>
+                <span className="text-[11px] md:text-xs font-medium text-slate-700">{t('layout.holdingTank')}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 shrink-0 rounded-full bg-amber-600 text-white flex items-center justify-center text-[10px] font-bold">7</div>
+                <span className="text-[11px] md:text-xs font-medium text-slate-700">{t('layout.sludgeTank')}</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-5 h-5 shrink-0 rounded-full bg-red-600 text-white flex items-center justify-center text-[10px] font-bold">8</div>
+                <span className="text-[11px] md:text-xs font-medium text-slate-700">{lang === 'th' ? 'รีดน้ำตะกอน' : 'Dewatering'}</span>
+              </div>
             </div>
           </div>
         </ScrollReveal>

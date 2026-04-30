@@ -23,8 +23,8 @@ export default function Home() {
         <ProjectSimulation />
         <ProjectOverview />
         <SiteLayout />
-        <ProcessFlow />
         <VisualExplanation />
+        <ProcessFlow />
         <EquipmentMapping />
         {/* <BOQSummary /> */}
         <EnvironmentalAnalysis />
